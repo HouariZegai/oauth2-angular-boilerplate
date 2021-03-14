@@ -1,0 +1,13 @@
+.active-item {
+  color: var(--secondary-color)
+}
+
+.navbar-brand {
+  color: #3F51B5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+mat-toolbar {
+  margin-bottom: 40px;
+}

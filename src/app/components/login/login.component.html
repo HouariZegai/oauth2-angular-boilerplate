@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>Sign In</mat-card-title>
+  <form>
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Username *" [formControl]="usernameFormControl">
+        <mat-error align="end" *ngIf="usernameFormControl.hasError('required')">Username is required!</mat-error>
+              </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput type="password" placeholder="Password *" [formControl]="passFormControl">
+        <mat-error align="end" *ngIf="passFormControl.hasError('required')">Password is required!</mat-error>
+        <mat-error align="end" *ngIf="passFormControl.hasError('minlength') && !passFormControl.hasError('required')">Password must be greater or equal than 6 characters!</mat-error>
+      </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="onLogin()">Login</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

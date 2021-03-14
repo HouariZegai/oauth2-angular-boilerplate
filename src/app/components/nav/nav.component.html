@@ -1,0 +1,6 @@
+<mat-toolbar [class.mat-elevation-z4]="true" style="background-color: var(--primary-color)">
+  <a class="navbar-brand" routerLink="/">AZ Hotels</a>
+  <div class="spacer"></div>
+  <button mat-raised-button color="primary" style="margin-right: 10px" routerLink="/login" *ngIf="!isUserLogin">Login</button>
+  <button mat-raised-button style="background-color: var(--danger-color); color: #FFF" *ngIf="!isUserLogin" (click)="logout()">Logout</button>
+</mat-toolbar>
